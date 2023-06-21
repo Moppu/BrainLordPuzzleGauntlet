@@ -1,0 +1,64 @@
+
+:properties
+# For message boxes, 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+message1=>
+Switches are only visibly/>
+pushable if they're/>
+attached to a door.\>
+In this example, use of an/>
+off-screen door allows for/>
+pushable false switches.\>
+Note that if the door is/>
+placed in an enclosed area/>
+that the game obscures,/>
+the switches WON'T work,\>
+which is why we use the/>
+platinum water here as a/>
+barrier instead of normal/>
+walls.\>
+Be mindful of lag, since/>
+each pushable and switch/>
+is processed every frame.\>
+What we've got here is/>
+about the max it can/>
+handle without dropping/>
+frames.\>
+Push all the left switches/>
+to open the door.
+
+tileset=Platinum
+music=Platinum
+# Number before dest indicates door ID as specified further down. Number at the end indicates entry point to warp to in the given map.
+door1dest=Demo10.txt,1
+door2dest=Demo10.txt,1
+
+:datakey
+W=Wall
+D=Weighted Door 1
+d=Weighted Door 2
+S=Weighted Switch 1
+s=Weighted Switch 2
+R=Pushable Rock
+B=Pushable Ball
+E=Entry 1
+M=Message Box 1
+ =Floor
+.=Hole
+,=Cracked Floor
+
+:mapdata
+.....................................
+...............WWWWWWW...............
+...............WWWWWWW...............
+...............W     W...............
+...............WWWWWWW...............
+...............WWMDWWW.....WWW.......
+...............S     s.....WdW.......
+...............SR R Rs...............
+...............S  E  s...............
+.....................................
+.....................................
+.....................................
+.....................................

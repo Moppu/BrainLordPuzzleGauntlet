@@ -1,0 +1,38 @@
+
+:properties
+# For message boxes, 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+
+tileset=Ruins
+music=Ruins
+# Number before dest indicates door ID as specified further down. Number at the end indicates entry point to warp to in the given map.
+door1dest=RuinsLobby.txt,2
+door2dest=RuinsLobby.txt,2
+combo=654321
+
+:datakey
+W=Wall
+D=Toggle Door 1
+# First number indicates the associated door, second indicates the combo number for the switch.
+1=Toggle Switch 1 1
+2=Toggle Switch 1 2
+3=Toggle Switch 1 3
+4=Toggle Switch 1 4
+5=Toggle Switch 1 5
+6=Toggle Switch 1 6
+E=Entry 1>left
+ =Floor
+w=Floor Warper 2
+
+:mapdata
+WWWWWWWWWWWWW
+WWDWWWWWWWWWW
+WW WWWWWWWWWW
+W  123456  WW
+W          WW
+W          WW
+W         EwW
+W          WW
+WWWWWWWWWWWWW
+WWWWWWWWWWWWW

@@ -1,0 +1,38 @@
+
+:properties
+# For message boxes, 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+message1=>
+Weighted switches are each/>
+paired with a door and all/>
+of them must be pressed to/>
+open the door.\>
+Push the ball and rock/>
+onto the switches.
+
+door1dest=Demo3.txt,1
+tileset=Platinum
+music=Platinum
+
+:datakey
+W=Wall
+B=Pushable Ball
+R=Pushable Rock
+# Numbers matching means the switches are linked to the door.
+# Up to four switches can be linked to each door.
+S=Weighted Switch 1
+D=Weighted Door 1
+E=Entry 1
+M=Message Box 1
+ =Floor
+
+:mapdata
+WWWWWWWWW
+WWMWDWWWW
+W       W
+WRS B S W
+W     R W
+W   E   W
+WWWWWWWWW
+WWWWWWWWW

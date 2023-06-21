@@ -1,0 +1,370 @@
+﻿A list of the types of tiles that can be placed on maps.
+
+These can be associated with a single character in the :datakey section of maps.
+
+Note: see code under MapLoad/ for how these are actually implemented.
+
+Supported tile types for placement on maps include:
+
+-----------------------
+----- Floor types -----
+-----------------------
+
+
+Empty
+  the empty space outside maps
+
+
+Floor
+  regular floor.  shadows are added as appropriate for the tileset.
+
+
+Unshadowed Floor
+  same as floor, except shadow effects from surrounding walls are not added.
+  for maps where you're using floor tiles that don't have shadowed versions, this
+  is sometimes helpful for a consistent look.  vanilla's phantom floor room in
+  the tower is an example, since they use those rubble floor tiles to indicate
+  safe spots, but there is no shadowed version of them.
+
+
+Hole
+  a hole you can fall into.  edges are added as appropriate for the tileset.
+
+
+Floor Crest
+  a highlighted floor tile for drawing attention to things like entry positions or objects.
+
+
+Icy Floor
+  slippery floor for ice castle maps.
+  unsupported on other map types and changed to Floor.
+
+
+Cracked Floor
+  floor that becomes a hole when stepped on.
+  supported only on Platinum tileset.  replaced by Hole on other tilesets.
+
+
+Conveyor Left, Conveyor Right, Conveyor Up, Conveyor Down
+  conveyor belt that pushes you in a specified direction.
+  unsupported on Tower tileset and changed to Floor.
+  Ruins tileset has opposing directions on a single tile.
+
+
+Phantom Floor
+  Floor that periodically drops out and becomes a Hole.
+  Requires "phantom floor" property to be enabled for the map.
+  on Tower tileset, these look like a normal floor and can be hidden.
+  on Ruins tileset, it's bright blue and unhidden.
+  other tilesets do not support it and replace it with Hole.
+
+
+Definitely Not Phantom Floor
+  for Tower maps, this is the little rocks that can show you where
+  solid ground is.
+  on other tilesets, replaced by Floor.
+
+
+Electric Floor
+  Floor that damages you on Ruins tileset.
+  unsupported on other tilesets and replaced by Floor.
+
+
+Trap
+  spike tile that pops up when you walk near it.
+  looks slightly different from the normal tile.
+  unsupported on Ruins tileset and replaced by Electric Floor.
+  unsupported on Platinum tileset and replaced by Cracked Floor.
+
+
+Alternating Trap (n)
+  where (n) = 1 - 4
+  traps that auto-trigger and un-trigger on a timer, where any with the same number
+  are in sync.
+  only works on Ice Castle maps when the "alternating traps" property is set.
+  note that this is an alternate map setting that makes other animations like
+  waterfalls not work.
+
+
+Toggle Switch (d) (c)
+  a switch as part of a set of switches used to open a Toggle Door when pressed in a
+  specific order.
+  (d) = a number matching the "(n)" specified on a Toggle Door in order to pair the 
+        two together.
+  (c) = a number indicating the combination number associated with the switch.
+  the order to unlock the door is defined by the "combo" property of the map; ie; 
+    combo=34251
+  to indicate that the following switches should be pressed in order:
+    Toggle Switch (d) 3
+	Toggle Switch (d) 4
+	Toggle Switch (d) 2
+	Toggle Switch (d) 5
+	Toggle Switch (d) 1
+
+
+Weighted Switch (d)
+  a switch that needs to be held down to open a Weighted Door tile.
+  (d) = a number matching the "(n)" specified on a Weighted Door in order to pair the 
+  two together.
+
+
+Falling Object Switch (n)
+  a switch that summons a Falling Ice or Falling Ball object.  those objects won't
+  appear until the switch paired with them is pressed.
+  (n) = a number that matches "(n)" of a Falling Ice or Falling Ball object to indicate
+        the two should be paired together.
+
+
+Light Switch
+  a switch that turns that lights on when pressed.
+  the game hardcodes the tile this turns into when pressed, so it doesn't work on
+  tilesets other than Ruins, which is the only one that supports the lights
+  going out to begin with.
+  i tried it in the Platinum dark rooms.  it doesn't work, and you get stuck because
+  it turns into some wall tile.
+
+
+Floor Warper (n)
+  a doorway that transitions to another map when stepped upon.
+  (n) = an identifier for the door that is also used in the destination definition.
+
+
+Up Stairs (n)
+  an upward stairway warper leading to another map.
+  if the tile below it is a "Floor" tile, then the corresponding stairway leading 
+  up to the warper will be added.
+  (n) = an identifier for the door that is also used in the destination definition.
+
+
+Down Stairs (n)
+  a downward stairway warper leading to another map.
+  unlike the Up Stairs, this is only ever a single tile and nothing is added
+  adjacent to it.  feel free to add Floor Crest to highlight its landing location.
+  (n) = an identifier for the door that is also used in the destination definition.
+
+
+----------------------
+----- Wall types -----
+----------------------
+
+Wall
+  a solid wall.  for some tilesets, this is automatically shaped to form corners and other
+  shapes based on the tiles surrounding it.
+  horizontal walls should always be at least two tiles high, otherwise the game gets
+  confused about how to render/obscure rooms.
+
+
+Unlocked Door (n)
+  an unlocked door that you can walk through any time.
+  (n) = an identifier for the door that is also used in the destination definition.
+  if placed at the bottom of a room, it appears as a socket down into the wall instead of a door.
+  See "Entry" for how to control where the door goes.
+
+
+Locked Door (n)>(key num)
+  a locked door requiring a specific key to open.
+  (n) = an identifier for the door that is also used in the destination definition
+  (key num) = a base-10 number indicating the ID of the key that will open this door.
+  Key names and descriptions can be customized in the puzzle entry-point file.  
+  See Puzzle Entry Point.txt for details.
+
+
+Weighted Door (n)
+  Door that is unlocked by pushing objects onto a number of Weighted Switch tiles.
+  (n) = a number that is the same as (d) on the Weighted Switch definition to indicate
+  the door and switch are paired together. this is the identifier for the door that is also
+  used in the destination definition.
+  the first four Weighted Switches defined for the door will control the door, and
+  others will not affect it.
+  See "Entry" for how to control where the door goes.
+
+
+Toggle Door (n)
+  Door that is unlocked by pressing Toggle Switch tiles in a certain sequence.
+  (n) = a number that is the same as (d) on the Toggle Switch definition to indicate
+  the door and switch are paired together. this is the identifier for the door that is also
+  used in the destination definition.
+  can be used for numerical puzzles, however it should be noted that a maximum of eight
+  of these switches can be paired to a given door, so you can't include every digit
+  for a numerical puzzle.
+  switches that are not part of the combination are ignored and can be pressed at
+  any time.  this is vanilla behavior that i don't currently have a workaround for.
+  See "Entry" for how to control where the door goes.
+
+
+Wall Decoration 1
+  can be used to highlight a spot on a wall, or otherwise decorate walls.
+  should only be used for "inner" walls; ie, the wall directly above a floor tile.
+
+
+Pillar Left
+  a wall with a pillar or other object highlighting its left side.  usually
+  used for decoration around wall corners, or near doors.
+
+
+Pillar Right
+  a wall with a pillar or other object highlighting its right side.  usually
+  used for decoration around wall corners, or near doors.
+
+
+Message Box (n)
+  a plaque on the wall with a message to read.
+  (n) = a numeric identifier of the message, used to pair the tile to the message
+  the message is defined as a property of the map "message(n)" in the "properties" section.
+    notes about text:
+	  - supported characters include 
+	     A-Z 
+		 a-z 
+		 0-9 
+		 ).?:;'"-,*!
+		 use / for a new line
+		 use \ for a pause for the player to hit a button w/ a new line (should be placed every 4 lines)
+		 use > to continue text on a new line
+		 use ~ to enable/disable alternate color font, commonly used to highlight item names, etc
+      - 26 characters max on one line before you should put a / new line.
+      - many examples available in the Demo files
+
+
+------------------------
+----- Object types -----
+------------------------
+
+  ************************************************************************************************** 
+  Note: all types below can be preceded by [Floor type:] to optionally specify a floor type they will
+  appear on top of.  If unspecified, a sensible default for the given object will be chosen.
+  ie.
+    e=Floor Crest:Save Point
+	E=Save Point
+  **************************************************************************************************
+
+
+Save Point=(Save name)
+  a save statue.
+  the save name is the name it will show up under in warp gate menus.
+
+
+Chest=(item name)
+  a chest with the specified item, spell, or jade in it.  
+  for the most part, you can use vanilla item names here.
+  see Resources/Misc/ChestItems.txt for the list of items that can be specified here.  names are
+  case-insensitive.  some examples that may be useful for puzzles are:
+    - phaser
+	   the spell that lets you freeze the platinum water temporarily
+	- wind shoes
+	   a debug accessory that lets you walk over holes
+	- fire sword
+	   sword that lets you melt ice blocks.  there's also an option to start with this equipped.
+	- cape
+	   armor that increases your movement speed to match the rolling balls.  there's also an option
+	   to start with this equipped.
+	- key (n)
+	   consumable key to a specific locked door
+  Note that keys are indicated by base-10 number here (Key 5, etc) and their names and descriptions
+  can be customized in the puzzle entry-point file.  See Puzzle Entry Point.txt for details.
+
+
+Pushable Rock (or just "Rock")
+  a rock you can push onto Weighted Switch floors to solve puzzles.  moves one tile at a time.
+
+
+Pushable Ball (or just "Ball")
+  a ball you can push onto Weighted Switch floors to solve puzzles.  moves until it hits another
+  solid object or wall.  note that some other floor types (like Platinum's Cracked Floor) will
+  stop it also.
+
+
+Pushable Bouncing Ball (or just "Bouncing Ball")
+  a blue pushable ball that bounces backward when it hits a solid object or wall.
+
+
+Red Ball
+  a red ball that starts moving toward you if you're directly in a cardinal direction
+  from it.  really laggy and should be used sparingly.
+
+
+Pushable Tower Wall (or just "Tower Wall")
+  the pushable wall used to hide secrets in a couple vanilla Tower maps.
+  acts the same as a Rock.
+
+
+Pushable Ruins Wall (or just "Ruins Wall")
+  the pushable wall used to hide secrets in a couple vanilla Ruins maps.
+  acts the same as a Rock.
+
+
+Pushable Droog Statue (or just "Droog Statue")
+  i'm not sure why this is pushable, but it seems to work the same as the rocks, so i threw
+  it in in case anyone wants to use it.  it looks like the statue on the Toronto path that
+  you put the sapphire into to unlock Droog.
+
+
+Pushable Ice (or just "Ice")
+  same as the Pushable Rock, except it looks like ice, and can be melted by the fire sword.
+
+
+Pushable Sliding Ice (or just "Sliding Ice")
+  same as the Pushable Ball, except it looks like ice, and can be melted by the fire sword.
+
+
+Pushable Bouncing Ice (or just "Bouncing Ice")
+  same as the Pushable Bouncing Ball, except it looks like ice, and can be melted by the fire sword.
+
+
+Pushable Moving Ice (or just "Moving Ice")
+  ice that moves a random direction every couple seconds.
+  there are more values for this that cause it to move more specific directions, and i may
+  include them later if they end up being interesting for puzzles.
+
+
+Moving Platform (n)
+  the gray platforms that move a specific distance/pattern and then back when you step or
+  jump on them.
+
+
+Automated Moving Platform (n)
+  like Moving Platform, except they move back and forth periodically instead of when you
+  step on them.
+
+
+Controllable Platform (or just "Platform")
+  the pushable, rideable platforms from Ruins that you can use to move over holes.
+
+
+Falling Ice (n)
+  a Sliding Ice that appears when a button is pushed.
+  (n) = a numeric identifier matching the Falling Object Switch that drops it.
+
+
+Falling Ball (n)
+  a Pushable Ball that appears when a button is pushed.
+  (n) = a numeric identifier matching the Falling Object Switch that drops it.
+
+
+-----------------
+----- Other -----
+-----------------
+
+Entry (n)[>direction]
+  an entry point into the map, to be referenced from other maps when creating doors.
+  (n) = a numeric identifier for the entry
+  Every door on the map should have a corresponding destination definition in the "properties" section:
+    door(n)dest=(filename),(e)
+	(n) = the numeric identifier of the door, specified in Door type definitions above
+	(filename) = the name of the map the door should transition to
+	(e) = the id of the Entry on the target map where the door should put you
+  the bracketed direction block is optional; if a direction is specified, ie:
+    Entry 2>left
+  then transitioning to this entry point will cause you to face that direction.
+  if unspecified, you'll face up, or down if the door is above you.
+
+
+@xx
+  place tile xx (in hex) from the chosen tileset.
+  note that while the named tiles are designed to work as well as possible in any tileset,
+  using a specific tile value like this will make your map only look correct in the current tileset.
+  Brain Lord's tile ids for a given tile type should NOT be expected to line up between tilesets; that
+  is, a door tile may be 0x12 in one tileset, but 0x37 in another.
+  This should really only be used to place tiles that I don't currently provide a named tile type for.
+
+  the sample puzzle file under "Demonstration" provides maps that show tile ids for every tileset.
+  go in the right door on the first map to find them.

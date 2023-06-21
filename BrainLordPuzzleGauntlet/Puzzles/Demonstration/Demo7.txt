@@ -1,0 +1,54 @@
+
+:properties
+# For message boxes, 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+message1=>
+Maps can link to different/>
+parts of themselves.\>
+The game automatically/>
+obscures areas not/>
+directly accessible from/>
+where you are now.
+
+door1dest=Demo7.txt,2
+door2dest=Demo7.txt,1
+door3dest=Demo7.txt,4
+door4dest=Demo7.txt,3
+door5dest=Demo8.txt,1
+tileset=Platinum
+music=Toronto
+
+:datakey
+W=Wall
+# Numbers matching means the switches are linked to the door.
+# Up to four switches can be linked to each door.
+S=Weighted Switch 5
+R=Pushable Rock
+D=Weighted Door 5
+E=Entry 1
+M=Message Box 1
+ =Floor
+P=Phantom Floor
+1=Unlocked Door 1
+2=Unlocked Door 2
+3=Unlocked Door 3
+4=Unlocked Door 4
+a=Entry 2
+b=Entry 3
+c=Entry 4
+
+:mapdata
+WWWWWWWWWWWWWWWWW
+WWWWWWWWDWWWWWWWW
+W     SRcRS     W
+W  WWWWW4WWWWW  W
+W  WWMWW3WWWWW  W
+W  W    b    W  W
+W  W         W  W
+W  W    a    W  W
+W  WWWWW2WWWWW  W
+W  WWWWW1WWWWW  W
+W       E       W
+WWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWW

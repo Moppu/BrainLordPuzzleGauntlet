@@ -1,0 +1,44 @@
+
+:properties
+# For message boxes, 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+
+tileset=Ruins
+music=Ruins
+
+# Number before dest indicates door ID as specified further down. Number at the end indicates entry point to warp to in the given map.
+door1dest=RuinsLobby.txt,6
+door2dest=RuinsLobby.txt,6
+
+:datakey
+W=Wall
+d=Unlocked Door 1
+D=Weighted Door 2
+S=Weighted Switch 2
+B=Red Ball
+R=Rock
+E=Floor Crest:Entry 1
+T=Wall Decoration 1
+>=Pillar Right
+<=Pillar Left
+ =Floor
+x=Floor Crest
+
+:mapdata
+     WWWWWWWWWWWWWWWWWWWWWWW
+     WWWTTTWWWW>W<WWWWWWWWWW
+     W                     W
+     W x          x  x WWEWW
+     W   WWWWWW        WWdWW
+     W x WWWWWWWWWWWWWWWWWWW
+     W   W    WWWWWWWWWWW WW
+     W x W
+WWWW W   W
+WWDWWW x W
+W> <TW   W
+WS SR  x W
+W SBR    W
+W   R    W
+WWWWWWWWWW
+WWWWWWWWWW

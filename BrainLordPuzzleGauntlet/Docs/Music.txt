@@ -1,0 +1,38 @@
+A list of track names that can be referenced from map files.  Note they are case-sensitive.
+
+(Town themes)
+Arcs: The Arcs town theme
+Toronto: The Toronto town theme
+Shop: The shop theme
+Inn: The inn theme
+
+(Dungeon themes)
+Tower: Theme to the Tower of Light (first dungeon)
+Ruins: Theme to the Ruins/Ancient Civilization (second dungeon)
+Ice Castle: Theme to the Ice Castle (third dungeon)
+Droog: Theme to the Droog Volcano (fourth dungeon)
+Platinum: Theme to the Platinum Shrine (fifth dungeon)
+
+(Path themes)
+Tower Path: Theme to the path between Arcs and the Tower
+Ruins Path: Theme to the cave between Arcs and the Ruins
+Toronto Path: Theme to the path between Arcs and Toronto
+Desert: Theme to the desert leading to the Ice Castle
+Droog Path: Theme to the cliffs leading to the Droog Volcano
+Platinum Path: Theme to the tunnels between Toronto and the Platinum Shrine
+
+(Battle themes)
+Boss 1: Theme to the first and third bosses
+Boss 2: Theme to the second and fourth bosses
+
+(Other)
+Dragon: Intro/Dragon cutscene music
+Toronto Cutscenes: Music played during a few cutscenes at the Toronto inn
+Arena: The arena battle theme
+Arena Win: The victory theme for the Toronto arena.  Note this does not loop.
+Arena Loss: The defeat theme for the Toronto arena.  Note this does not loop.
+Boss Win: The victory theme that plays after boss fights.  Note this does not loop.
+Title: The title screen theme.  Note this does not loop.
+Credits: The credits theme.  Note this DOES loop.
+Ending Cutscene: Theme to the post-credits cutscene.  Note this does not loop.
+Death: Theme that plays when you die.  Note this does not loop.

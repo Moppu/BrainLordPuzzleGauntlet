@@ -1,0 +1,46 @@
+
+:properties
+# For message boxes, 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+message1=>
+Avoid using more than four/>
+objects when possible.\>
+It gets pretty laggy, and/>
+the most switches you can/>
+use for one door is four,/>
+anyway.\>
+Note here that the bottom/>
+most switch does not need/>
+to be pressed.
+
+door1dest=Demo5.txt,1
+tileset=Platinum
+music=Platinum
+
+:datakey
+W=Wall
+B=Pushable Ball
+R=Pushable Rock
+r=Red Ball
+# Numbers matching means the switches are linked to the door.
+# Up to four switches can be linked to each door.
+S=Weighted Switch 1
+D=Weighted Door 1
+E=Entry 1
+M=Message Box 1
+ =Floor
+h=Hole
+
+:mapdata
+WWWWWWWWWWWWW
+WWMWWWDWWWWWW
+W           W
+WSR hhhhh   W
+WSB h  rh   W
+WSR hhh h   W
+W   hS  h   W
+W   hhhh    W
+WSR   E     W
+WWWWWWWWWWWWW
+WWWWWWWWWWWWW

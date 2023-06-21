@@ -1,0 +1,38 @@
+
+:properties
+# For message boxes, 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+
+tileset=Ice Castle
+music=Ice Castle
+
+# Number before dest indicates door ID as specified further down. Number at the end indicates entry point to warp to in the given map.
+door1dest=IceCastleLobby.txt,4
+door2dest=IceCastleLobby.txt,4
+
+:datakey
+W=Wall
+D=Weighted Door 1
+R=Rock
+B=Ball
+S=Weighted Switch 1
+E=Entry 1
+T=Wall Decoration 1
+>=Pillar Right
+<=Pillar Left
+ =Floor
+d=Unlocked Door 2
+I=Sliding Ice
+
+:mapdata
+WWWWWWWW
+WWWDWWWW
+WW    WW
+W S  B WWWWWWWW
+W  SR  WWTTTWTW
+W  RS  T      W
+W B  S  I   E W
+W     WWWWWWdWW
+WWWWWWWWWWWWWWW
+WWWWWWW

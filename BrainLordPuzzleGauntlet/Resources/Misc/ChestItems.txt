@@ -1,0 +1,138 @@
+﻿# List of items that can be in chests, mapped by regex of name 
+
+# 00: Consumables
+# 0000 says Apple but actually gives you nothing
+apple=0001
+cheese=0002
+^(warp)? ?gate=0003
+# 0004 is the debug master key, which doesn't actually (currently) work
+(cape|paralyze|paralysis) herb=0005
+(antidote|poison) herb=0006
+dragon scale=0007
+# if i remember right, these two don't actually work in vanilla
+barrier capsule=0008
+power capsule=0009
+heart=000A
+(source|drop) of power=000B
+(source|drop) of protect=000C
+# this one does work, but i'm not editing the warps list for these (yet)
+debug warp gate=000D
+(magic ?)wallet=000E
+silver bullion=000F
+gold bullion=0010
+x(-?)ray( glasses)?=0011
+drink=0012
+sapphire=0013
+scrap of paper=0014
+silver plaque=0015
+# 0016 (and thereafter) is called Letter, and does not work
+
+
+# 01: Weapons
+
+# swords
+copper sword=0101
+iron sword=0102
+steel buster=0103
+gold sword=0104
+platinum sword=0105
+
+# axes; the game likes to spell it "ax"
+battle axe?=0106
+tomahawk=0107
+rock breaker=0108
+great axe?=0109
+
+# boomerangs
+boomerang=010A
+chuckler=010B
+
+# ball and chains
+morning star=010C
+heavy mall=010D
+
+# bows
+long bow=010E
+heavy bow=010F
+lightning bow=0110
+
+# 0111 is a nameless, pictureless sword that hits for 5
+
+fire sword=0112
+
+# everything 0113 and after seems to do the same as 0111
+
+# 02: Hats
+leather helm(et)?=0201
+iron helm(et)?=0202
+cross helm(et)?=0203
+blackgold helm(et)?=0204
+warrior's helm(et)?=0205
+platinum helm(et)?=0206
+
+# 03: Armor
+leather armor=0301
+chain mail=0302
+banded mail=0303
+bone mail=0304
+plate armor=0305
+royal armor=0306
+cape=0307
+
+# 04: Shields
+buckler=0401
+round shield=0402
+kite shield=0403
+bone shield=0404
+warrior shield=0405
+battle shield=0406
+(arena )?shield=0407
+
+# 05: Accessories
+(reviving)? ?mirror=0501
+# 0502 is the debug mirror, which is theoretically supposed to revive you forever, but does not work
+wind (shoes|boots)=0503
+spike (shoes|boots)=0504
+# 0505 and thereafter have no description or portrait, but can be equipped, and seem to do nothing
+
+# 06: Jades
+# 0600 makes me name a jade, but doesn't actually give me anything
+life jade=0601
+crimson jade=0602
+foundation jade=0603
+power jade=0604
+lightning jade=0605
+anger jade=0606
+water jade=0607
+deceased jade=0608
+light jade=0609
+# duplicates with their own default name and exp/level
+lightning jade 2=060A
+anger jade 2=060B
+water jade 2=060C
+crimson jade 2=060D
+# 060E and thereafter is a nameless water jade that seems to work, though i'm not sure what happens when it levels up
+
+# 07: Keys
+key (\d\d?)=07xx
+# the names and descriptions of these should probably be reconfigurable eventually
+
+# 08: Spells
+# 0801 is a fireball spell copy with no name or graphic
+magic shot=0802
+magic shield=0803
+flame ring=0804
+fire ?ball=0805
+impulse=0806
+lightning=0807
+magic missile=0808
+bound=0809
+ice=080A
+pha(s|z)er=080B
+# 080C and 080D are a really long-charge fireball
+slow=080E
+stop=080F
+ghost=0810
+# everything after this point seems to be a nameless copy of ghost
+
+# any type above 08 will just dump a shitload of text for the name and probably eventually crash

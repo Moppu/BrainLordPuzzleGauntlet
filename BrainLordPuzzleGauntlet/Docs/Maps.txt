@@ -1,0 +1,107 @@
+﻿Constructing a map file
+
+Note that for any line in any section below, start the line with "#" to
+make the line a comment.
+
+Maps are in a human-editable text format with three separate sections:
+
+-----------------------
+---- Map Properties ---
+-----------------------
+
+Section indicated by:
+:properties
+
+Defines map-wide properties, specified by:
+key name=value  
+
+Supported properties include:
+
+tileset=(tileset)
+  Define the tileset to be used for the map.  Supported values for (tileset) currently include:
+  - Tower
+  - Ruins
+  - Ice Castle
+  - Platinum
+  More may be added later, but these are the main tilesets with a majority of the puzzle elements available.
+
+
+music=(music)
+  Define the music for the map.  See Music.txt for a list of supported values for (music).
+
+
+door(n)dest=(destination.txt),(e)
+  Define a destination for a door (n) to map (destination.txt) at entry point (e).
+  See "Entry" in Tile Types.txt for how to define these and pair them to doors.
+
+
+phantom floor=(yes/no)
+  For maps where the tileset is Tower or Ruins, enable phantom floor.
+  If this is disabled, phantom floor tiles will act as normal floors and never disappear.
+  If this is enabled, they will disappear occasionally accompanied by that noise they make.
+
+
+ice castle clouds=(yes/no)
+  For maps using the Ice Castle tileset, show or hide the overlay fog on layer 2.
+  Default off.
+
+
+alternating traps=(yes/no)
+  For maps using the Ice Castle tileset, whether the Alternating Trap tile types
+  will work.
+  See Alternating Trap (n) in Tile Types.txt.
+
+
+dark=(yes/no)
+  For maps in the Ruins tileset, make the room dark and lightable by Light Jade or a
+  Light Switch.
+  Note that for Ruins maps with holes, the holes appear red in darkness, and bright
+  white after the lights come on with a switch.
+  For maps using the Platinum tileset, make it one of those dark rooms that not
+  even the light jade will light up.
+  Should be used sparingly for Platinum, as these rooms are awful.
+
+
+infinite respawns=(yes/no)
+  Enemies will respawn in their original spot if killed and scrolled off the screen.
+  Default off.
+
+
+enemy spawn limit=(n)
+  Enemies won't spawn if this many are already on the screen.
+  Helps reduce lag in some situations.
+  Default to no limit.
+
+
+message(n)=...
+  Define a message to be shown by a messagebox on a wall.
+  See "Message Box" in Tile Types.txt for how to format the text.
+
+
+-------------------
+---- Data Key -----
+-------------------
+
+Section indicated by:
+:datakey
+
+Pairs a single text character with a tile type from Tile Types.txt to construct the map
+in the following Map Data section.
+
+Each tile type should be indicated by
+(c)=(t)
+
+where (c) is a single ASCII character (avoid using # and :) and (t) is a tile type from Tile Types.txt.
+
+
+-------------------
+---- Map Data -----
+-------------------
+
+Section indicated by:
+:mapdata
+
+Construct the map using the characters defined in the Data Key section.
+
+Max width and height for Brain Lord maps are 64, but try to keep it under, say, 56 on each dimension,
+otherwise the edges will look weird.

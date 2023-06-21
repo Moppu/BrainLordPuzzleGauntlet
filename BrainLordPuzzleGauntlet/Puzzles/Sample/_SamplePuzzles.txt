@@ -1,0 +1,25 @@
+﻿# Entry point to a single BLPG hack
+
+# Filename of starting map and the entry point within the map to start at
+# You can specify a full path here or one relative to this file
+# Vertical bar is the separator since it can't appear in filenames
+start=SampleMain.txt|1
+
+# Subsequent maps are linked within the maps themselves
+
+# A few options below
+
+# yes to start with the cape equipped for better movement speed
+startWithCape=yes
+# yes to start with the fire sword equipped for ice puzzles
+startWithFireSword=yes
+# survive a lot of falls
+startingHealth=127
+# probably not too meaningful
+startingAtk=99
+startingDef=99
+# set to yes to have all doors be open
+practiceMode=yes
+
+fasterPushing=yes
+

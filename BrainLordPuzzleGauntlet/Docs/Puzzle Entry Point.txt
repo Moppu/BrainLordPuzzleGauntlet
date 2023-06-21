@@ -1,0 +1,61 @@
+﻿Constructing a puzzle gauntlet definition file
+
+This is the entrypoint file that should be loaded by the tool under "Puzzle File."
+
+They can be named whatever you want, but I tend to name them with "_" so they show up first alphabetically
+and I can find them easily.
+
+See 
+  Demonstration/_DemoPuzzles.txt 
+  Sample/_SamplePuzzles.txt 
+  VanillaPuzzles/_VanillaPuzzles.txt
+for examples.
+
+It's a simple text file with a list of properties.  Supported properties include:
+
+start=(first map file.txt)|(e)
+  Define the starting map and location.
+  See Maps.txt and Tile Types.txt for details on how to set up the map files.
+  (first map file.txt) = the map defintion file for the first map
+  (e) = the Entry identifier the player will start at on that map
+  "|" is used here as a separator to avoid conflicts with characters in filenames.
+  The filename can be an absolute or relative path.  Recommend using relative paths
+  and just keeping everything in the same directory.
+
+
+startWithCape=(yes/no)
+  Yes to start with the cape equipped instead of the bronze armor, for better movement speed.
+
+
+startWithFireSword=(yes/no)
+  Yes to start with the fire sword, so you can melt ice objects.
+
+
+startingHealth=(n)
+  Current and max health of the player for a new game.  Max you should use is 127.
+  Default to 6 or whatever the vanilla game has if you don't specify it.
+
+
+startingAtk=(n)
+  Attack stat for the player.  Default to whatever the vanilla game defaults to (0, I think?)
+
+
+startingDef=(n)
+  Defense stat for the player.  Default to whatever the vanilla game defaults to (0, I think?)
+
+
+practiceMode=(yes/no)
+  Yes to replace locked puzzle doors with unlocked doors, for easier exploration/testing.
+
+
+fasterPushing=(yes/no)
+  Reduce the delay when pushing objects as a quality-of-life change.
+  Default off.
+
+
+key(n).name
+key(n).desc
+  Change the name or description of key number (n), as referenced by chests and doors in
+  map files, so you can customize keys to your own puzzles.
+
+

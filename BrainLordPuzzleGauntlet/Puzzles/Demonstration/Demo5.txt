@@ -1,0 +1,53 @@
+
+:properties
+# For message boxes, 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+message1=>
+You can spawn in ice/>
+to use for switch puzzles/>
+like that one room in the/>
+vanilla Ice Castle.\>
+The ice acts the same as/>
+a ball and slides until/>
+it hits a wall.\>
+It can be destroyed by the/>
+fire sword which can add/>
+complexity to puzzles.\>
+It shows up and looks okay/>
+on any tileset, but really/>
+belongs on this one.\>
+Also, Ice Castle maps can/>
+optionally have this/>
+cloud overlay.
+
+door1dest=Demo6.txt,1
+tileset=Ice Castle
+music=Ice Castle
+ice castle clouds=yes
+
+:datakey
+W=Wall
+# Numbers matching means the switches are linked to the door.
+# Up to four switches can be linked to each door.
+S=Weighted Switch 1
+I=Falling Object Switch 1
+i=Falling Ice 1
+D=Weighted Door 1
+B=Pushable Ball
+E=Entry 1
+M=Message Box 1
+ =Floor
+h=Hole
+t=Trap
+v=Conveyor Down
+
+:mapdata
+WWWWWWWWW
+WWMWDWWWW
+Wh t  hhW
+W   S   W
+WhhhiBI W
+WhhhE  hW
+WWWWWWWWW
+WWWWWWWWW

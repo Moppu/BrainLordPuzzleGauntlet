@@ -1,0 +1,56 @@
+
+:properties
+# For message boxes, 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+
+message1=>
+The puzzle has/>
+three numbers.\>
+Multiplied together/>
+they equal 30./>
+Added together/>
+they equal 10.\>
+The first is a small/>
+number. The second is/>
+a large number./>
+The third is the one left.
+
+tileset=Ruins
+music=Ruins
+combo=253
+
+# Number before dest indicates door ID as specified further down. Number at the end indicates entry point to warp to in the given map.
+door1dest=RuinsLobby.txt,4
+door2dest=Ruins3b.txt,1
+
+:datakey
+W=Wall
+M=Message Box 1
+a=Unlocked Door 1
+b=Toggle Door 2
+# First number indicates the associated door, second indicates the combo number for the switch.
+A=Entry 1
+B=Entry 2
+ =Floor
+.=Floor Crest
+>=Pillar Right
+<=Pillar Left
+1=Toggle Switch 2 1
+2=Toggle Switch 2 2
+3=Toggle Switch 2 3
+4=Toggle Switch 2 4
+5=Toggle Switch 2 5
+6=Toggle Switch 2 6
+
+:mapdata
+WWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWbWWW
+WW>W<WWWWWWWWW>B<MW
+W        123456   W
+W  .    .         W
+W                 W
+W                 W
+WWWAWWWWWWWWWWWWWWW
+WWWaWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWWWW

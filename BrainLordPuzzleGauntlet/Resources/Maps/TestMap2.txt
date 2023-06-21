@@ -1,0 +1,27 @@
+
+:properties
+# 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+message1=>
+It's the next room!
+tileset=Platinum
+music=Dragon
+
+:datakey
+W=Wall
+E=Entry 1
+M=Message Box 1
+m=Message Box 2
+ =Floor
+,=Cracked Floor
+x=Hole
+
+:mapdata
+WWWWWWW
+WWWMWWW
+W     W
+W  E  W
+W     W
+WWWWWWW
+

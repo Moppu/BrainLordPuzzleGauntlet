@@ -1,0 +1,98 @@
+# Outer wall
+OuterWallHorizontal=64
+OuterWallBottom=81
+OuterWallTop=61
+OuterWallVertical=73
+OuterWallLeft=70
+OuterWallRight=72
+OuterWallTopLeft=63
+OuterWallTopLeftThick=60
+OuterWallTopRight=65
+OuterWallTopRightThick=62
+OuterWallTopEnd=66
+OuterWallBottomLeft=83
+OuterWallBottomLeftThick=80
+OuterWallBottomRight=85
+OuterWallBottomRightThick=82
+# this one actually seems to not exist in the tileset
+OuterWallRightEnd=64
+OuterWallLeftEnd=A5
+OuterWallBottomEnd=75
+# may add these back eventually, but need to figure out the right pattern to use them in and not conflict w/ other tilesets.
+# missing the little corner bits without them and it looks a little weird
+# OuterWallIntersectionTop=78
+# OuterWallIntersectionBottom=77
+# OuterWallIntersectionLeft=86
+# OuterWallIntersectionRight=76
+# doesn't have the corner bits, but close enough
+OuterWallIntersectionFourWay=71
+OuterWallNoConnections=71
+DoorSocket=04
+FloorWarper=6D
+
+# Inner wall
+InnerWallNormal=33
+InnerWallNormalNonObscured=90
+ShutteredDoor=1C
+LockedDoor=2C
+NormalDoor=0C
+MessageBox=09
+DoorOpenForObject=01
+# fan
+WallDecoration1=38
+# lights
+PillarLeft=22
+PillarRight=24
+
+# Floor
+PhantomFloorBelowFloor=2F
+PhantomFloor=2B
+DefinitelyNotPhantomFloor=01
+NormalFloor=01
+NormalFloorLeftShadow=49
+NormalFloorTopShadow=01
+NormalFloorTopLeftShadow=49
+Switch=3E
+Switch2=6E
+HoleBelowFloor=3B
+Hole=3C
+Empty=08
+FloorCrest=12
+ElectricFloor=2E
+
+ConveyorUp=8E
+ConveyorDown=8E
+ConveyorRight=8A
+ConveyorLeft=8A
+
+# Stairs
+UpStairsPlatform=0E
+UpStairs=1E
+DownStairsFromTop=6B
+DownStairsFromBottom=6B
+
+# not sure how these are used exactly; it is not a reference to a raw tile index
+# 02 for square switches
+SwitchPressedForObject=01
+DoorOpenValue=06
+
+# Vanilla map to grab tileset/palette/etc refs from for new maps
+# 64c73 has phantom floor
+# no phantom floor 64ce1
+TilesetStartOffset=64ce1
+# phantom floor
+TilesetStartOffsetAlt2=64c73
+# dark
+TilesetStartOffsetAlt1=64b97
+UnlockedDoorTileOffset=55821
+
+# Unsupported tile types
+Icy Floor>Floor
+Cracked Floor>Hole
+Trap>Electric Floor
+Definitely Not Phantom Floor>Floor
+Ice Block>Hole
+Alternating Trap 1>Floor
+Alternating Trap 2>Floor
+Alternating Trap 3>Floor
+Alternating Trap 4>Floor

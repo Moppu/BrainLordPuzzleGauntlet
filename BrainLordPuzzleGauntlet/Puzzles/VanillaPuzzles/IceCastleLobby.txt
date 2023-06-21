@@ -1,0 +1,75 @@
+
+:properties
+# For message boxes, 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+message1=>
+Floor 3\>
+Ball puzzle room with a/>
+message box intended to/>
+make you think there's no/>
+solution
+
+message2=>
+Floor 3/>
+Does this count as a/>
+puzzle? You just walk/>
+around clockwise.
+
+message3=>
+Floor 4/>
+Button puzzle with ice,/>
+two balls, and two rocks.
+
+tileset=Ice Castle
+music=Ice Castle
+
+# Number before dest indicates door ID as specified further down. Number at the end indicates entry point to warp to in the given map.
+door1dest=Lobby.txt,4
+door2dest=IceCastle1.txt,1
+door3dest=IceCastle2.txt,1
+door4dest=IceCastle3.txt,1
+
+:datakey
+W=Wall
+1=Message Box 1
+2=Message Box 2
+3=Message Box 3
+4=Wall Decoration 1
+5=Wall Decoration 1
+6=Wall Decoration 1
+.=Unlocked Door 1
+a=Unlocked Door 2
+b=Unlocked Door 3
+c=Unlocked Door 4
+d=Wall Decoration 1
+e=Wall Decoration 1
+f=Wall Decoration 1
+Z=Entry 1
+A=Floor Crest:Entry 2
+B=Floor Crest:Entry 3
+C=Floor Crest:Entry 4
+D=Floor Crest:Entry 5
+E=Floor Crest:Entry 6
+F=Floor Crest:Entry 7
+T=Wall Decoration 1
+>=Pillar Right
+<=Pillar Left
+ =Floor
+x=Floor Crest
+
+:mapdata
+WWWWWWWWWWWWWWWWWWWWWWWWW
+WWWTWWWWTWWW6fWWW5eWWWWWW
+W            F    E     W
+W                       W
+W                       W
+WWWWWWWWWWWWWWWWWWWWW   W
+WWWWWWWWWWWWWWWWWWWWW   W
+WWWWWWWWWWWWWWWWWWWWW   W
+WW1aWTW2bWTW3cWTW4dWW   W
+W  A    B    C    D     W
+W                       W
+W  Z                    W
+WWW.WWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWW

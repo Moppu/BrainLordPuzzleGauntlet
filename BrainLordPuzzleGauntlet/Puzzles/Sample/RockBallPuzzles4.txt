@@ -1,0 +1,45 @@
+
+:properties
+# For message boxes, 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+message1=>
+Puzzle 4
+
+tileset=Platinum
+music=Platinum
+# Number before dest indicates door ID as specified further down. Number at the end indicates entry point to warp to in the given map.
+door1dest=RockBallPuzzles4v2.txt,1
+
+:datakey
+W=Wall
+D=Weighted Door 1
+S=Weighted Switch 1
+R=Pushable Rock
+B=Pushable Ball
+E=Entry 1
+M=Message Box 1
+ =Floor
+H=Hole
+.=Floor
+
+# ball 1 up
+# ball 2 left and down
+# ball 3 left, down, left
+# ball 1 up left down left up
+
+# the other version is maybe better?
+
+:mapdata
+WWWWWWWWWWW
+WWMDWWWWWWW
+W    H    W
+W H.....B W
+WHS. ..   W
+WH.. ..   W
+W  H .S.B W
+WH   BH.  W
+W   HS..  W
+W E  H H  W
+WWWWWWWWWWW
+WWWWWWWWWWW

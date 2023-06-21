@@ -1,0 +1,83 @@
+# Outer wall
+OuterWallHorizontal=25
+OuterWallBottom=27
+OuterWallTop=26
+OuterWallVertical=15
+OuterWallLeft=16
+OuterWallRight=17
+OuterWallTopLeft=1A
+OuterWallTopLeftThick=1A
+OuterWallTopRight=1B
+OuterWallTopRightThick=1B
+OuterWallTopEnd=18
+OuterWallBottomLeft=2A
+OuterWallBottomLeftThick=2A
+OuterWallBottomRight=2B
+OuterWallBottomRightThick=2B
+OuterWallBottomEnd=19
+OuterWallRightEnd=29
+OuterWallLeftEnd=28
+OuterWallIntersectionFourWay=14
+OuterWallNoConnections=4F
+DoorSocket=06
+FloorWarper=35
+
+# Inner wall
+InnerWallNormal=11
+InnerWallNormalNonObscured=3D
+ShutteredDoor=0C
+LockedDoor=0A
+NormalDoor=09
+MessageBox=31
+DoorOpenForObject=05
+# pearls
+WallDecoration1=47
+PillarLeft=10
+PillarRight=12
+
+# Floor
+NormalFloor=32
+NormalFloorLeftShadow=33
+NormalFloorTopShadow=4D
+NormalFloorTopLeftShadow=4E
+Switch=2E
+Switch2=2E
+CrackedFloor=13
+HoleBelowFloor=05
+# 01 is an actual hole, without the black water
+Hole=05
+Empty=02
+FloorCrest=75
+
+# Platinum only has conveyors in the black rooms, so these are invisible, but they do exist
+ConveyorUp=21
+ConveyorDown=23
+ConveyorRight=22
+ConveyorLeft=24
+
+# Stairs
+UpStairsPlatform=76
+UpStairs=0F
+DownStairsFromTop=0E
+DownStairsFromBottom=1E
+
+# not sure how these are used exactly; it is not a reference to a raw tile index
+SwitchPressedForObject=05
+DoorOpenValue=0D
+
+# Vanilla map to grab tileset/palette/etc refs from for new maps
+TilesetStartOffset=652DE
+TilesetStartOffsetAlt1=652A7
+UnlockedDoorTileOffset=55835
+
+# Unsupported tile types
+Icy Floor>Floor
+Phantom Floor>Hole
+Definitely Not Phantom Floor>Floor
+Trap>Cracked Floor
+Electric Floor>Floor
+Ice Block>Hole
+Alternating Trap 1>Floor
+Alternating Trap 2>Floor
+Alternating Trap 3>Floor
+Alternating Trap 4>Floor

@@ -1,0 +1,83 @@
+# Outer wall
+OuterWallHorizontal=12
+OuterWallBottom=12
+OuterWallTop=12
+OuterWallVertical=12
+OuterWallLeft=12
+OuterWallRight=12
+OuterWallTopLeft=12
+OuterWallTopLeftThick=12
+OuterWallTopRight=12
+OuterWallTopRightThick=12
+OuterWallTopEnd=12
+OuterWallBottomLeft=12
+OuterWallBottomLeftThick=12
+OuterWallBottomRight=12
+OuterWallBottomRightThick=12
+OuterWallBottomEnd=12
+OuterWallRightEnd=12
+OuterWallLeftEnd=12
+OuterWallIntersectionFourWay=12
+OuterWallNoConnections=12
+DoorSocket=11
+FloorWarper=07
+
+# Inner wall
+InnerWallNormal=39
+InnerWallNormalNonObscured=52
+ShutteredDoor=34
+LockedDoor=32
+NormalDoor=30
+MessageBox=04
+DoorOpenForObject=00
+# torch
+WallDecoration1=1A
+PillarLeft=59
+PillarRight=5A
+
+# Floor
+PhantomFloorBelowFloor=05
+PhantomFloor=22
+DefinitelyNotPhantomFloor=4D
+NormalFloor=01
+NormalFloorLeftShadow=15
+NormalFloorTopShadow=01
+NormalFloorTopLeftShadow=15
+Switch=36
+Switch2=36
+HoleBelowFloor=42
+Hole=43
+Empty=10
+FloorCrest=8C
+Trap=25
+TrapForObject=00
+
+# Stairs
+UpStairsPlatform=07
+UpStairs=17
+DownStairsFromTop=0B
+DownStairsFromBottom=0C
+
+# not sure how these are used exactly; it is not a reference to a raw tile index
+SwitchPressedForObject=00
+DoorOpenValue=03
+
+# Vanilla map to grab tileset/palette/etc refs from for new maps
+# 64ada for phantom floor, b11 for none
+TilesetStartOffset=64b11
+TilesetStartOffsetAlt2=64ada
+UnlockedDoorTileOffset=5581D
+
+# Unsupported tile types
+Icy Floor>Floor
+Cracked Floor>Hole
+Conveyor Up>Floor
+Conveyor Down>Floor
+Conveyor Right>Floor
+Conveyor Left>Floor
+Electric Floor>Floor
+Ice Block>Hole
+Alternating Trap 1>Floor
+Alternating Trap 2>Floor
+Alternating Trap 3>Floor
+Alternating Trap 4>Floor

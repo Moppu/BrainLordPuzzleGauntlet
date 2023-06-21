@@ -1,0 +1,109 @@
+
+:properties
+# For message boxes, 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+message1=>
+Floor 1/>
+Push the switches from/>
+right to left.
+
+message2=>
+Floor 2/>
+Dual-room rock puzzle/>
+where you have to go/>
+through a door to reset\>
+the puzzle and solve it/>
+from the other side.
+
+message3=>
+Floor 2/>
+Two number puzzles that/>
+only end up giving you a/>
+cheese or something.
+
+message4=>
+Floor 2/>
+Synchronize the bouncing/>
+balls to all hit the/>
+switches together.
+
+message5=>
+Floor 2/>
+Get the red ball to hit/>
+one of the switches for/>
+you.
+
+message6=>
+Floor 4/>
+Similar to an older/>
+puzzle from tower, but/>
+with one less ball.
+
+message7=>
+Floor 4/>
+The code to the door/>
+has 3 even numbers and/>
+1 odd number.  Added\>
+together they make 13./>
+The first number is 4.
+
+tileset=Ruins
+music=Ruins
+
+# Number before dest indicates door ID as specified further down. Number at the end indicates entry point to warp to in the given map.
+door1dest=Lobby.txt,3
+door2dest=Ruins1.txt,1
+door3dest=Ruins2.txt,1
+door4dest=Ruins3.txt,1
+door5dest=Ruins4.txt,1
+door6dest=Ruins5.txt,1
+door7dest=Ruins6.txt,1
+door8dest=Ruins7.txt,1
+
+:datakey
+W=Wall
+1=Message Box 1
+2=Message Box 2
+3=Message Box 3
+4=Message Box 4
+5=Message Box 5
+6=Message Box 6
+7=Message Box 7
+.=Unlocked Door 1
+a=Unlocked Door 2
+b=Unlocked Door 3
+c=Unlocked Door 4
+d=Unlocked Door 5
+e=Unlocked Door 6
+f=Unlocked Door 7
+g=Unlocked Door 8
+Z=Entry 1
+A=Floor Crest:Entry 2
+B=Floor Crest:Entry 3
+C=Floor Crest:Entry 4
+D=Floor Crest:Entry 5
+E=Floor Crest:Entry 6
+F=Floor Crest:Entry 7
+G=Floor Crest:Entry 8
+T=Wall Decoration 1
+>=Pillar Right
+<=Pillar Left
+ =Floor
+x=Floor Crest
+
+:mapdata
+WWWWWWWWWWWWWWWWWWWWWWWWW
+WWWTWWW7gWWW6fWWW5eWWWWWW
+W       G    F    E     W
+W                       W
+W                       W
+WWWWWWWWWWWWWWWWWWWWW   W
+WWWWWWWWWWWWWWWWWWWWW   W
+WWWWWWWWWWWWWWWWWWWWW   W
+WW1aWTW2bWTW3cWTW4dWW   W
+W  A    B    C    D     W
+W                       W
+W  Z                    W
+WWW.WWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWW

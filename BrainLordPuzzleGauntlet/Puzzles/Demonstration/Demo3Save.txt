@@ -1,0 +1,20 @@
+
+:properties
+tileset=Platinum
+music=Platinum
+door1dest=Demo3.txt,2
+
+:datakey
+W=Wall
+E=Entry 1
+S=Save Point=Demo Save
+D=Unlocked Door 1
+ =Floor
+
+:mapdata
+WWWWWWW
+WWWWWWW
+W  S  W
+W  E  W
+WWWDWWW
+WWWWWWW

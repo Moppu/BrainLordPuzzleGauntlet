@@ -1,0 +1,159 @@
+
+:properties
+# For message boxes, 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+message1=>
+The automated moving/>
+platforms move in eight/>
+selectable patterns.\>
+They all move at about/>
+the same speed, so if you/>
+want two platforms to/>
+only sometimes line up,\>
+you should use platforms/>
+that travel two different/>
+distances.\>
+However, the vertical and/>
+horizontal ones do have/>
+slightly different/>
+movement periods, and\>
+will fall out of sync/>
+over time.\>
+They will move through any/>
+surface and you'll get/>
+knocked off if you hit a/>
+wall.\>
+Try to keep a max of six/>
+on screen at any time or/>
+the game will start to/>
+lag.\>
+The controllable hover/>
+thingy does not work well/>
+with them.\>
+Unlike the Tower tileset,/>
+Ruins phantom floors are/>
+not disguised like normal/>
+floors.
+
+door1dest=Demo9.txt,1
+tileset=Ruins
+music=Ruins
+phantom floor=yes
+#dark=yes
+
+:datakey
+W=Wall
+# Numbers matching means the switches are linked to the door.
+# Up to four switches can be linked to each door.
+S=Weighted Switch 1
+D=Weighted Door 1
+E=Entry 1
+M=Message Box 1
+ =Floor
+P=Phantom Floor
+F=Controllable Platform
+0=Automated Moving Platform 0
+1=Automated Moving Platform 1
+2=Automated Moving Platform 2
+3=Automated Moving Platform 3
+4=Automated Moving Platform 4
+5=Automated Moving Platform 5
+H=Hole
+B=Pushable Ball
+T=Test
+x=Electric Floor
+a=@00
+s=Light Switch
+
+# Moving Platform (non-automated) move in the following patterns, where S is their start location:
+# 0:  S
+#     .
+#     .
+#
+# 1:  S
+#     .
+#     .
+#     .
+#
+# 2:  .
+#     .
+#     S
+#
+# 3:  .
+#     .
+#     .
+#     S
+# 
+# 4:  S
+#     .
+#
+# 5:  .
+#     S
+# 
+# 6:  S.
+#
+# 7:  .S
+#
+# 8:  S..
+#
+# 9:  ..S
+#
+# 10: ...S
+#
+# 11 and every number after: same as 4
+
+# Automated Moving Platform (num) are fixed to the following patterns, where S is their start location:
+#
+# 0: two vertical tiles starting at the bottom
+#     .
+#     S
+#
+# 1: three vertical tiles starting at the bottom
+#     .
+#     .
+#     S
+#
+# 2: four vertical tiles starting at the bottom
+#     .
+#     .
+#     .
+#     S
+#
+# 3: two horizontal tiles starting at the left
+#     S.
+#
+# 4: three horizontal tiles starting at the left
+#     S..
+#
+# 5: four horizontal tiles starting at the left
+#     S...
+#
+# 6: move in a 4x6 rectanglular loop, counterclockwise, starting at the upper left corner
+#     S
+#     .
+#     .
+#     .  .
+#     .  .
+#     ....
+#
+# 7: move in a 3x3 rectanglular loop, counterclockwise, starting at the upper left corner
+#     S
+#     . .
+#     ...
+#
+# unfortunately it looks like they're bounds checking this, so there aren't any wacky out of range ones, and any numbers above this behave the same as 4.
+# note they all move at the same rate, so the ones that move the same distance will stay in sync, while different ones will fall out of sync.
+# welllll except that the vertical and horizontal ones seem to be like one frame off, and fall off sync over time
+
+:mapdata
+WWWWWWWWWWWWWWW
+WWMWDWWWWWWWWWW
+WS       B PPPW
+WHHHHH3HHHHPPPW
+WHHHHH4HHHHPPPW
+WHH0125HHHHPPPW
+W          PPPW
+WF  E  xxx PPPW
+WWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWW

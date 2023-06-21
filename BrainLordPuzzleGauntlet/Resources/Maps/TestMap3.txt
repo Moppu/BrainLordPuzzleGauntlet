@@ -1,0 +1,29 @@
+
+:properties
+# 26 letters max per line, slash for newline, backslash for button-wait; 4 lines per box
+# use > at the end of one line to extend to the next line
+__________________________
+message1=>
+It's another room.
+tileset=Platinum
+music=Platinum
+door1dest=TestMap.txt,2
+
+:datakey
+W=Wall
+D=Unlocked Door 1
+E=Entry 1
+M=Message Box 1
+I=Falling Ice 1
+i=Falling Object Switch 1
+ =Floor
+
+:mapdata
+WWWWWWW
+WWWMWWW
+W     W
+W I i W
+W  E  W
+WWWDWWW
+WWWWWWW
+

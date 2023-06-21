@@ -1,0 +1,92 @@
+# Outer wall
+OuterWallHorizontal=02
+OuterWallBottom=02
+OuterWallTop=02
+OuterWallVertical=02
+OuterWallLeft=02
+OuterWallRight=02
+OuterWallTopLeft=02
+OuterWallTopLeftThick=02
+OuterWallTopRight=02
+OuterWallTopRightThick=02
+OuterWallTopEnd=02
+OuterWallBottomLeft=02
+OuterWallBottomLeftThick=02
+OuterWallBottomRight=02
+OuterWallBottomRightThick=02
+OuterWallBottomEnd=02
+OuterWallRightEnd=02
+OuterWallLeftEnd=02
+OuterWallIntersectionFourWay=02
+OuterWallNoConnections=02
+DoorSocket=03
+FloorWarper=13
+
+# Inner wall
+InnerWallNormal=04
+InnerWallNormalNonObscured=08
+ShutteredDoor=1E
+LockedDoor=2E
+NormalDoor=0E
+MessageBox=2C
+DoorOpenForObject=02
+# green wall
+WallDecoration1=28
+# no pillars in ice castle
+PillarLeft=04
+PillarRight=04
+
+# Floor
+NormalFloor=01
+NormalFloorLeftShadow=11
+NormalFloorTopShadow=01
+NormalFloorTopLeftShadow=11
+Switch=3E
+Switch2=3E
+HoleBelowFloor=39
+Hole=30
+Empty=23
+IcyFloor=5D
+IcyFloorLeftShadow=32
+FloorCrest=7B
+Trap=3A
+TrapForObject=02
+
+ConveyorUp=15
+ConveyorDown=16
+ConveyorRight=17
+ConveyorLeft=18
+
+# Stairs
+UpStairsPlatform=13
+UpStairs=26
+DownStairsFromTop=35
+DownStairsFromBottom=35
+
+# not sure how these are used exactly; it is not a reference to a raw tile index
+SwitchPressedForObject=02
+DoorOpenValue=07
+
+# Vanilla map to grab tileset/palette/etc refs from for new maps
+# 64dc5 for no waterfall animations
+# 64e33 for .. some?
+# 64D20 seems good for all maybe
+TilesetStartOffset=64D20
+# w/ alternating traps
+TilesetStartOffsetAlt1=64DFC
+UnlockedDoorTileOffset=55825
+
+# Specific to ice castle
+IceBlock=4D
+IceBlockLeftShadow=4A
+
+AlternatingTrap1=75
+AlternatingTrap2=76
+AlternatingTrap3=77
+AlternatingTrap4=78
+
+# Unsupported tile types
+Cracked Floor>Hole
+Phantom Floor>Hole
+Definitely Not Phantom Floor>Floor
+Electric Floor>Floor
