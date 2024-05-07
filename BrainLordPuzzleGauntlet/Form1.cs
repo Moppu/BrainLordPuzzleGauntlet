@@ -18,7 +18,7 @@ namespace BrainLordPuzzleGauntlet
     public partial class Form1 : Form
     {
         ToolTip t = new ToolTip();
-        string VERSION_NUMBER = "0.1";
+        string VERSION_NUMBER = "0.2";
         public Form1()
         {
             InitializeComponent();
