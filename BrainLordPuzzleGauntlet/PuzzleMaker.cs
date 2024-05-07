@@ -266,7 +266,7 @@ namespace BrainLordPuzzleGauntlet
             rom[workingOffset++] = 0x00;
             rom[workingOffset++] = 0x00;
 
-            // for now, no enemies
+            // enemies block
             CodeGenerationUtils.ensureSpaceInBank(ref workingOffset, (testMap.enemies.Count + 1) * 6);
             int enemiesOffset = workingOffset + 0xC00000;
             foreach(Enemy enemy in testMap.enemies)
@@ -278,7 +278,7 @@ namespace BrainLordPuzzleGauntlet
                 rom[workingOffset++] = enemy.b4;
                 rom[workingOffset++] = enemy.b5;
             }
-            // empty enemy block
+            // enemy block end
             rom[workingOffset++] = 0xFF;
             rom[workingOffset++] = 0xFF;
             rom[workingOffset++] = 0xFF;
@@ -316,10 +316,10 @@ namespace BrainLordPuzzleGauntlet
                 entryDoorOffsets[entryId] = doorOffset;
                 // make a door to it
                 rom[workingOffset++] = testMap.entries[entryId].dir; // my direction after entering 0=up, 1=right
-                rom[workingOffset++] = (byte)(startXPixel); // 0xC0; // x pos lsb
-                rom[workingOffset++] = (byte)(startXPixel >> 8); // 0x00; // x pos msb
-                rom[workingOffset++] = (byte)(startYPixel);// 0x08; // y pos lsb
-                rom[workingOffset++] = (byte)(startYPixel >> 8);// 0x00; // y pos msb
+                rom[workingOffset++] = (byte)(startXPixel); // x pos lsb
+                rom[workingOffset++] = (byte)(startXPixel >> 8); // x pos msb
+                rom[workingOffset++] = (byte)(startYPixel); // y pos lsb
+                rom[workingOffset++] = (byte)(startYPixel >> 8); // y pos msb
                 // offset to itself; i think this is where "return" goes
                 rom[workingOffset++] = (byte)(doorOffset);
                 rom[workingOffset++] = (byte)(doorOffset >> 8);
@@ -404,10 +404,10 @@ namespace BrainLordPuzzleGauntlet
                 int startXPixel = testMap.saveLoadSpots[saveNum].entryPos.x * 32 - 0x80;
                 int startYPixel = testMap.saveLoadSpots[saveNum].entryPos.y * 32 - 0x80;
                 rom[offset++] = 0x00; // my direction after entering 0=up, 1=right
-                rom[offset++] = (byte)(startXPixel); // 0xC0; // x pos lsb
-                rom[offset++] = (byte)(startXPixel >> 8); // 0x00; // x pos msb
-                rom[offset++] = (byte)(startYPixel);// 0x08; // y pos lsb
-                rom[offset++] = (byte)(startYPixel >> 8);// 0x00; // y pos msb
+                rom[offset++] = (byte)(startXPixel); // x pos lsb
+                rom[offset++] = (byte)(startXPixel >> 8); // x pos msb
+                rom[offset++] = (byte)(startYPixel); // y pos lsb
+                rom[offset++] = (byte)(startYPixel >> 8); // y pos msb
 
                 // offset to itself; i think this is where "return" goes
                 rom[offset++] = (byte)(thisDoorOffset);

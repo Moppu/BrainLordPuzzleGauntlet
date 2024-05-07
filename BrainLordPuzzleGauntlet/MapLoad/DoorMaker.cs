@@ -49,10 +49,6 @@ namespace BrainLordPuzzleGauntlet.MapLoad
 
         private bool match(string objTypeName)
         {
-            if(objTypeName.Contains("Locked"))
-            {
-                int i = 0;
-            }
             foreach (String regex in objectTypes.Keys)
             {
                 if (Regex.Match(objTypeName, regex).Success)
@@ -150,19 +146,19 @@ namespace BrainLordPuzzleGauntlet.MapLoad
                 else
                 {
                     mapObj.p1 = map.tileset["DoorOpenForObject"];
+                    if (door.noTransition)
+                    {
+                        door.doorType = 0;
+                    }
+                    // no door opening animation when walking through
+                    if (!puzzles.practiceMode)
+                    {
+                        door.doorAnimation = 0;
+                        door.doorType = 3;
+                    }
                 }
                 map.otherObjects.Add(mapObj);
                 door.noTransition = !foundTransition;
-                if(door.noTransition)
-                {
-                    door.doorType = 0;
-                }
-                // no door opening animation when walking through
-                if(!puzzles.practiceMode)
-                {
-                    door.doorAnimation = 0;
-                    door.doorType = 3;
-                }
             }
             else
             {
